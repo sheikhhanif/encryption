@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Site Title -->
+<script type="text/javascript">var publication_date = "December 20, 2018";</script>
+<script type="text/javascript">var blog_title = "Online Encryption and Decryption";</script>
+<script type="text/javascript" src="js/blog_head.js"></script>
+<link rel="stylesheet" href="stylesheets/crypto.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Main JavaScript -->
+<script src="js/crypto/main.js"></script>
+<!-- Crypto Libraries -->
+<script src="js/crypto/mainscript.js"></script>
+<script src="js/crypto/enc-utf8.js"></script>
+<script src="js/crypto/crypto-js.js"></script>
+<script src="js/crypto/aes.js"></script>
+<script src="js/crypto/tripledes.js"></script>
+<script src="js/crypto/rc4.js"></script>
+<script src="js/crypto/rabbit.js"></script>
+<script src="js/crypto/sha1.js"></script>
+<script src="js/crypto/sha3.js"></script>
+<script src="js/crypto/md5.js"></script>
+<script src="js/crypto/Blowfish.js"></script>
+<script src="js/crypto/enc-base64.js"> </script>
+<script src="js/crypto/down.js"></script>
+		
+</head>
+
+<body>
+<script type="text/javascript" src="js/blog_header.js"></script>
+
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+      <div class="row">
+        <div class="col-25">
+          <label for="algo">Choose Algorithm</label>
+        </div>
+        <div class="col-75">
+          <select id="method">
+            <option value="def">Select encryption method</option>
+        <option value="aes">Blowfish</option>
+            <option value="aes">AES</option>
+            <option value="des">3DES</option>
+            <option value="rc4">RC4 Stream</option>
+            <option value="rb">Rabbit Stream</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="key">Enter Key</label>
+        </div>
+        <div class="col-75">
+          <input type="password" id="key" name="key" placeholder="Enter key ..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="plaintext">Enter Text</label>
+        </div>
+        <div class="col-75">
+          <textarea id="plain" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <button onclick="dec();">Decrypt</button>
+        <button onclick="enc();">Encrypt</button>
+        <button onclick="sha1();">SHA1</button>
+        <button onclick="sha3();">SHA3</button>
+        <button onclick="md();">MD5</button>
+      </div>
+      <div class="row">
+        <div class="col-25"> </div>
+        <div class="col-75">
+          <textarea readonly id="chipher" name="subject" placeholder="Result will appear here.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <button onclick="doDL();">Download</button>
+      </div>
+      
+        <div>
+
+          <h4>User Manual</h4>
+          <p>Encryption:</p>
+        <ol>
+          <li>Choose Algorithm (AES, DES ..)</li>
+          <li>Enter your secret key (AKA password)</li>
+          <li>Copy/paste or write your text you want to encrypt</li>
+          <li>Click Encrypt</li>
+          <li>Click on Download to save your file</li>
+        </ol>
+        </br>
+          <p>Decryption:</p>
+        <ol>
+          <li>Choose Algorithm (AES, DES ..)</li>
+          <li>Enter your secret key you used for encryption (AKA password)</li>
+          <li>Copy/paste or write your encrypted text you want to decrypt</li>
+          <li>Click decrypt</li>
+          <li>Click on Download to save your file</li>
+        </ol>
+          <p> You can use Hash function (SHA1, SHA3, MD5) to check the integrity of your text in the future.</p>
+      </div>
+   
+    </br>
+      <script type="text/javascript" src="js/blog_signature.js"></script>
+    </div>
+    
+  </section>
+</div>
+<script type="text/javascript" src="js/blog_footer.js"></script>
+</body>
+</html>
